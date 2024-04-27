@@ -4,16 +4,38 @@
   box-sizing: border-box;
 }
 
+h1 {
+  position: relative;
+  padding: 0.25em 1em;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+}
+h1:before, h1:after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  width: 2px;
+  height: -webkit-calc(100% + 14px);
+  height: calc(100% + 14px);
+  background-color: black;
+}
+h1:before {
+  left: 7px;
+}
+h1:after {
+  right: 7px;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   font-family: 'Roboto Condensed', sans-serif;
   width: 100vw;
   height: 100vh;
-  background-color: #ffe9a7;
+  background-color: #ffe9a764;
   opacity: 1.0;
   z-index: -1;
   background-size: 40px 40px;
-  background-image:  repeating-linear-gradient(0deg, #ffc107, #ffc107 2px, #ffe9a7 2px, #ffe9a7);
+  background-image:  repeating-linear-gradient(0deg, #ffc1075d, #ffc10753 2px, #ffe9a73e 2px, #ffe9a73f);
 }
 
 header {
@@ -39,7 +61,7 @@ header {
 
 .inputForm button {
   padding: 0.38rem 0.5rem;
-  background: rgb(176, 186, 232);
+  background: rgb(198, 209, 219);
 }
 
 .todoList {
